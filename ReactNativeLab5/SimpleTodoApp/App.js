@@ -17,7 +17,6 @@ export default function App() {
   const [editingText, setEditingText] = useState('');
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
-  // Load tasks from AsyncStorage
   useEffect(() => {
     const loadTasksFromStorage = async () => {
       try {
@@ -30,7 +29,6 @@ export default function App() {
     loadTasksFromStorage();
   }, []);
 
-  // Save tasks to AsyncStorage whenever tasks state changes
   useEffect(() => {
     const saveTasksToStorage = async () => {
       try {
